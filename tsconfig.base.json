@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "types": ["bun-types"],
+    "paths": {
+      "@lumio/ui/*": ["./packages/ui/src/*"],
+      "@lumio/shared/*": ["./packages/shared/src/*"],
+      "@lumio/db/*": ["./packages/db/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "out"]
+}

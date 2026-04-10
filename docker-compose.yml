@@ -1,0 +1,33 @@
+services:
+  # ──── 基础设施 ────
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: lumio
+      POSTGRES_USER: lumio
+      POSTGRES_PASSWORD: lumio_dev
+
+  redis:
+    image: valkey/valkey:8-alpine
+    ports:
+      - "6379:6379"
+
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command: server /data --console-address ":9001"
+    volumes:
+      - miniodata:/data
+    environment:
+      MINIO_ROOT_USER: lumio
+      MINIO_ROOT_PASSWORD: lumio_dev_secret
+
+volumes:
+  pgdata:
+  miniodata:

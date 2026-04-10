@@ -1,0 +1,21 @@
+{
+  "name": "@lumio/shared",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types/*": "./src/types/*",
+    "./stores/*": "./src/stores/*",
+    "./api/*": "./src/api/*",
+    "./utils/*": "./src/utils/*"
+  },
+  "dependencies": {
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

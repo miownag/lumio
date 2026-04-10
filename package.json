@@ -1,0 +1,25 @@
+{
+  "name": "lumio",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*", "server"],
+  "scripts": {
+    "dev": "bun run --filter '*' dev",
+    "dev:web": "bun run --filter @lumio/web dev",
+    "dev:server": "bun run --filter @lumio/server dev",
+    "dev:desktop": "bun run --filter @lumio/desktop dev",
+    "dev:infra": "docker compose up postgres redis minio -d",
+    "build": "bun run --filter '*' build",
+    "build:docker": "docker compose build",
+    "build:desktop": "bun run --filter @lumio/desktop build",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "db:migrate": "bun run --filter @lumio/db migrate",
+    "db:seed": "bun run infra/scripts/seed.ts",
+    "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules server/node_modules"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "typescript": "^5.7.0"
+  }
+}

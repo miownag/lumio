@@ -1,0 +1,24 @@
+{
+  "name": "@lumio/server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot ./src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun",
+    "start": "bun ./dist/index.js"
+  },
+  "dependencies": {
+    "@lumio/db": "workspace:*",
+    "@lumio/shared": "workspace:*",
+    "hono": "^4.7.0",
+    "@mastra/core": "^0.5.0",
+    "@mastra/hono": "^0.1.0",
+    "better-auth": "^1.2.0",
+    "drizzle-orm": "^0.38.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.30.0",
+    "typescript": "^5.7.0"
+  }
+}

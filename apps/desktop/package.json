@@ -1,0 +1,21 @@
+{
+  "name": "@lumio/desktop",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./main/index.ts",
+  "scripts": {
+    "dev": "echo 'TODO: electron dev with HMR'",
+    "build": "echo 'TODO: electron-builder package'"
+  },
+  "dependencies": {
+    "@lumio/ui": "workspace:*",
+    "@lumio/shared": "workspace:*",
+    "@lumio/common": "workspace:*",
+    "electron": "^33.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.0.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@lumio/web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot ./src/server.ts",
+    "build": "echo 'TODO: production build'"
+  },
+  "dependencies": {
+    "@lumio/ui": "workspace:*",
+    "@lumio/shared": "workspace:*",
+    "@lumio/common": "workspace:*",
+    "@tanstack/react-router": "^1.100.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tanstack/router-devtools": "^1.100.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}
